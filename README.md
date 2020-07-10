@@ -4,7 +4,7 @@ This file contains my scripts to work with **YOLOv3** (neural network for object
 
 # Setup
 
-## How to install Yolo System:
+## How to install YOLO:
 1. Run these in the terminal accordingly:
 
 >git clone https://github.com/pjreddie/darknet
@@ -49,17 +49,20 @@ Then you will see something like this:
 > cd darknet
 
 > git clone https://github.com/chua0876/YOLOv3_AutonomousBed.git
+
 2. Download the path detection weights file and put it in the **darknet** directory.
 > https://drive.google.com/file/d/1ca-NcQEHWHXCmkGO6kbLxTRF8CNHdpph/view?usp=sharing
 
 ### Test on image file:
 1. Run this command in the terminal to test the weights file:
 > ./darknet detector test YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/Sample.jpg
+
 2. Then you will see the result of the detection like **Result.jpg** in the **YOLOv3_AutonomousBed** folder!
 
 ### Test on video file: (Require compiling with CUDA and OpenCV - https://pjreddie.com/darknet/install/#cuda)
 1. Test the model on a recorded hospital-like corridor video file:
 > ./darknet detector demo YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/NorthSpine.mp4
+
 2. To use the model in real-time condition:
 > ./darknet detector demo YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights -c 0
 
