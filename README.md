@@ -69,5 +69,26 @@ Then you will see something like this:
 ## Training Custom YOLOv3 (New version YOLOv4 is available now)
 Highly recommend referring to https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
 
+1. Marking detection boxes:
+- Download the images required to be the training set from Google or wherever source
+- On Linux terminal, run these commands:
+> git clone https://github.com/AlexeyAB/Yolo_mark.git
+
+> cd Yolo_mark
+
+> cmake .
+
+> make
+
+> ./linux_mark.sh
+- After installing Yolo_Mark, follow the steps provided in https://github.com/AlexeyAB/Yolo_mark
+
+2. Prepare config. and other required files by referring to https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
+- Focus on steps 1,2,3 and 6.
+- Download pre-trained weights in Step 7
+
+3. Start training by using command
+> ./darknet detector train data/obj.data yolo-obj.cfg yolov4.conv.137 (change to corrent path and files)
+
 For more details:
 https://pjreddie.com/darknet/yolo/ and https://github.com/AlexeyAB/darknet
