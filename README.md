@@ -51,7 +51,7 @@ Then you will see something like this:
 > https://drive.google.com/file/d/1ca-NcQEHWHXCmkGO6kbLxTRF8CNHdpph/view?usp=sharing
 3. Run this command in the terminal to test the weight file:
 > ./darknet detector test YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/Sample.jpg
-4. Then you will see the result of the detection like **Result.png** in the **YOLOv3_AutonomousBed** folder!
+4. Then you will see the result of the detection like **Result.jpg** in the **YOLOv3_AutonomousBed** folder!
 5. 
 > ./darknet detector demo YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/NorthSpine.mp4
 6. 
