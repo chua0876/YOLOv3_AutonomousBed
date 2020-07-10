@@ -50,5 +50,5 @@ Then you will see something like this:
 2. Download the path detection weights file and put it in the **Darknet** directory.
 > https://drive.google.com/file/d/1ca-NcQEHWHXCmkGO6kbLxTRF8CNHdpph/view?usp=sharing
 3. Run this command in the terminal to test the weight file:
-> ./darknet detector test YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/frame0201.jpg
+> ./darknet detector test YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/Sample.jpg
 4. Then you will see the result of the detection like **Result.png** in the **YOLOv3_AutonomousBed** folder!
