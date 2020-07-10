@@ -65,3 +65,9 @@ Then you will see something like this:
 
 ## Training Custom YOLOv3 (New version YOLOv4 is available now)
 Highly recommend referring to https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
+
+
+
+For more details:
+https://github.com/AlexeyAB/darknet
+https://pjreddie.com/darknet/yolo/
