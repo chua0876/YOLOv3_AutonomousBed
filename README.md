@@ -49,9 +49,13 @@ Then you will see something like this:
 > git clone https://github.com/chua0876/YOLOv3_AutonomousBed.git
 2. Download the path detection weights file and put it in the **Darknet** directory.
 > https://drive.google.com/file/d/1ca-NcQEHWHXCmkGO6kbLxTRF8CNHdpph/view?usp=sharing
-3. Run this command in the terminal to test the weight file:
+
+### Test on image file:
+1. Run this command in the terminal to test the weights file:
 > ./darknet detector test YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/Sample.jpg
-4. Then you will see the result of the detection like **Result.jpg** in the **YOLOv3_AutonomousBed** folder!
-5. 
+2. Then you will see the result of the detection like **Result.jpg** in the **YOLOv3_AutonomousBed** folder!
+
+### Test on video file: (Require OpenCV and GPU)
 > ./darknet detector demo YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/NorthSpine.mp4
-6. 
+To use the model in real-time condition:
+./darknet detector demo YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights -c 0
