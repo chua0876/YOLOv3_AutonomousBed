@@ -42,12 +42,14 @@ Then you will see something like this:
 
 > bicycle: 99%
 
+# Autonomous Hospital Bed Path Detection model:
+
 ## How to use the custom path detection model?
-1. Download and put the weights and config. file required for the leg detection in the **darknet** directory:
+1. Download and put the required files for the path detection in the **darknet** directory:
 > cd darknet
 
 > git clone https://github.com/chua0876/YOLOv3_AutonomousBed.git
-2. Download the path detection weights file and put it in the **Darknet** directory.
+2. Download the path detection weights file and put it in the **darknet** directory.
 > https://drive.google.com/file/d/1ca-NcQEHWHXCmkGO6kbLxTRF8CNHdpph/view?usp=sharing
 
 ### Test on image file:
@@ -55,7 +57,11 @@ Then you will see something like this:
 > ./darknet detector test YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/Sample.jpg
 2. Then you will see the result of the detection like **Result.jpg** in the **YOLOv3_AutonomousBed** folder!
 
-### Test on video file: (Require OpenCV and GPU)
+### Test on video file: (Require compiling with CUDA and OpenCV - https://pjreddie.com/darknet/install/#cuda)
+1. Test the model on a recorded hospital-like corridor video file:
 > ./darknet detector demo YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights YOLOv3_AutonomousBed/NorthSpine.mp4
-To use the model in real-time condition:
-./darknet detector demo YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights -c 0
+2. To use the model in real-time condition:
+> ./darknet detector demo YOLOv3_AutonomousBed/obj.data YOLOv3_AutonomousBed/yolov3-tiny-obj.cfg yolov3-tiny-obj_final.weights -c 0
+
+## Training Custom YOLOv3 (New version YOLOv4 is available now)
+Highly recommend referring to https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
